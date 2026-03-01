@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praveena K | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f1f5f9;
+    color:#1e293b;
+}
+
+section{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.container{
+    max-width:1000px;
+    width:100%;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    width:100%;
+    background:white;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    z-index:1000;
+}
+
+nav h2{
+    color:#2563eb;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#1e293b;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#2563eb;
+}
+
+/* Hero */
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero span{
+    color:#2563eb;
+}
+
+.hero h3{
+    margin-top:10px;
+    color:#475569;
+}
+
+/* Cards */
+.card{
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+/* Section Titles */
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2563eb;
+}
+
+/* Contact Links */
+a{
+    color:#2563eb;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+    section{
+        padding-top:100px;
+        height:auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Praveena K</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HOME -->
+<section id="home">
+    <div class="container hero">
+        <h1>Hi, I'm <span>Praveena K</span></h1>
+        <h3>Aspiring Software Developer | Python & Web Developer</h3>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="card">
+            Third-year B.Tech IT student passionate about web development and Python programming.
+            Completed internships and actively participated in hackathons.
+            Certified in Python for Data Science through NPTEL.
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <div class="container">
+        <h2 class="section-title">Experience & Achievements</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>InternPE Internship</h3>
+                <p>13.10.2025 – 09.11.2025</p>
+            </div>
+
+            <div class="card">
+                <h3>Astro Web Solution Internship</h3>
+                <p>19 June 2025 – 19 July 2025</p>
+            </div>
+
+            <div class="card">
+                <h3>Hackathon Participation</h3>
+                <p>Kamaraj College of Engineering and Technology</p>
+                <p>MSME Hackathon Participant</p>
+            </div>
+
+            <div class="card">
+                <h3>NPTEL Certification</h3>
+                <p>Python for Data Science</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="card">
+            <p>Email: kavyapravena1526@gmail.com</p>
+            <p>LinkedIn:
+                <a href="https://www.linkedin.com/in/praveena-k-488b78370" target="_blank">
+                View Profile</a>
+            </p>
+            <p>GitHub:
+                <a href="https://github.com/praveena-15052005/Praveena.K.git" target="_blank">
+                View Repository</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
