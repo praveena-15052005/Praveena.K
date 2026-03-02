@@ -5,117 +5,144 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Praveena K | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+    font-family:'Segoe UI',sans-serif;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
 body{
-    background:#f1f5f9;
-    color:#1e293b;
+    background:#eef2f7;
+    color:#2d3436;
 }
 
+/* NAVBAR */
+nav{
+    background:#1e272e;
+    padding:15px 0;
+    text-align:center;
+    position:sticky;
+    top:0;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 18px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#00cec9;
+}
+
+/* SECTION */
 section{
-    height:100vh;
+    padding:60px 8%;
+}
+
+/* HOME SECTION */
+.home-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    flex-wrap:wrap;
+    padding-top:40px;  /* extra space from top */
+}
+
+/* PHOTO FIXED */
+.photo{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    overflow:hidden;          /* prevents image outside */
+    border:6px solid #00cec9;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:40px;
-}
-
-.container{
-    max-width:1000px;
-    width:100%;
-}
-
-/* Navbar */
-nav{
-    position:fixed;
-    width:100%;
     background:white;
-    padding:15px 40px;
+}
+
+.photo img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    
+}
+
+/* TEXT */
+.home-text{
+    max-width:450px;
+}
+
+.home-text h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.home-text p{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+/* SKILLS */
+.skills-list{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    z-index:1000;
+    flex-wrap:wrap;
+    gap:15px;
 }
 
-nav h2{
-    color:#2563eb;
+.skill{
+    background:#00cec9;
+    color:white;
+    padding:10px 20px;
+    border-radius:20px;
+    font-size:14px;
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    gap:25px;
-}
-
-nav ul li a{
-    text-decoration:none;
-    color:#1e293b;
-    font-weight:500;
-}
-
-nav ul li a:hover{
-    color:#2563eb;
-}
-
-/* Hero */
-.hero{
-    text-align:center;
-}
-
-.hero h1{
-    font-size:40px;
-}
-
-.hero span{
-    color:#2563eb;
-}
-
-.hero h3{
-    margin-top:10px;
-    color:#475569;
-}
-
-/* Cards */
+/* CARDS */
 .card{
     background:white;
-    padding:30px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.06);
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:8px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.08);
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
-}
-
-/* Section Titles */
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-    color:#2563eb;
-}
-
-/* Contact Links */
-a{
-    color:#2563eb;
+/* CONTACT */
+.contact a{
+    display:block;
+    margin-bottom:10px;
+    color:#0984e3;
     text-decoration:none;
 }
 
+/* MOBILE */
 @media(max-width:768px){
     section{
-        padding-top:100px;
-        height:auto;
+        padding:40px 6%;
+    }
+
+    .home-container{
+        flex-direction:column;
+        text-align:center;
+        gap:30px;
+    }
+
+    .home-text h1{
+        font-size:36px;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
     }
 }
 </style>
@@ -124,80 +151,68 @@ a{
 <body>
 
 <nav>
-    <h2>Praveena K</h2>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#internships">Internships</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<!-- HOME -->
 <section id="home">
-    <div class="container hero">
-        <h1>Hi, I'm <span>Praveena K</span></h1>
-        <h3>Aspiring Software Developer | Python & Web Developer</h3>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="card">
-            Third-year B.Tech IT student passionate about web development and Python programming.
-            Completed internships and actively participated in hackathons.
-            Certified in Python for Data Science through NPTEL.
+    <div class="home-container">
+        <div class="photo">
+            <img src="profile.jpg" alt="Praveena K">
+        </div>
+        <div class="home-text">
+            <h1>Praveena K</h1>
+            <p>B.Tech IT – Third Year</p>
+            <p>Aspiring Web Developer</p>
+            <p>Leadership | Fast Learner</p>
         </div>
     </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience">
-    <div class="container">
-        <h2 class="section-title">Certifications & Intenships</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>InternPE Internship</h3>
-                <p>13.10.2025 – 09.11.2025</p>
-            </div>
-
-            <div class="card">
-                <h3>Astro Web Solution Internship</h3>
-                <p>19 June 2025 – 19 July 2025</p>
-            </div>
-
-            <div class="card">
-                <h3>Hackathon Participation</h3>
-                <p>Kamaraj College of Engineering and Technology</p>
-                <p>MSME Hackathon Participant</p>
-            </div>
-
-            <div class="card">
-                <h3>NPTEL Certification</h3>
-                <p>Python for Data Science</p>
-            </div>
-        </div>
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java (Basics)</div>
+        <div class="skill">Python (Basics)</div>
     </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="card">
-            <p>Email: kavyapravena1526@gmail.com</p>
-            <p>LinkedIn:
-                <a href="https://www.linkedin.com/in/praveena-k-488b78370" target="_blank">
-                View Profile</a>
-            </p>
-            <p>GitHub:
-                <a href="https://github.com/praveena-15052005/Praveena.K.git" target="_blank">
-                View Repository</a>
-            </p>
-        </div>
+<section id="internships">
+    <h2>Internships</h2>
+    <div class="card">
+        <h3>InternPE</h3>
+        <p>13 Oct 2025 – 9 Nov 2025</p>
     </div>
+    <div class="card">
+        <h3>Astro Web Solution</h3>
+        <p>19 June 2025 – 19 July 2025</p>
+    </div>
+</section>
+
+<section id="certificates">
+    <h2>Certificates & Participation</h2>
+    <div class="card">
+        <p>NPTEL Certified – Python for Data Science</p>
+    </div>
+    <div class="card">
+        <p>Hackathon – Kamarajar College of Engineering and Technology</p>
+    </div>
+    <div class="card">
+        <p>MSME Hackathon Participant</p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <a href="mailto:kavyapravena1526@gmail.com">kavyapravena1526@gmail.com</a>
+    <a href="https://github.com/praveena-15052005/Praveena.K.git" target="_blank">GitHub Profile</a>
+    <a href="https://www.linkedin.com/in/praveena-k-488b78370" target="_blank">LinkedIn Profile</a>
 </section>
 
 </body>
