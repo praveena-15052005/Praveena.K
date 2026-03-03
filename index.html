@@ -5,215 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Praveena K | Portfolio</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background:#eef2f7;
-    color:#2d3436;
-}
-
-/* NAVBAR */
-nav{
-    background:#1e272e;
-    padding:15px 0;
-    text-align:center;
-    position:sticky;
-    top:0;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 18px;
-    font-weight:600;
-}
-
-nav a:hover{
-    color:#00cec9;
-}
-
-/* SECTION */
-section{
-    padding:60px 8%;
-}
-
-/* HOME SECTION */
-.home-container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:60px;
-    flex-wrap:wrap;
-    padding-top:40px;  /* extra space from top */
-}
-
-/* PHOTO FIXED */
-.photo{
-    width:220px;
-    height:220px;
-    border-radius:50%;
-    overflow:hidden;          /* prevents image outside */
-    border:6px solid #00cec9;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:white;
-}
-
-.photo img{
-    max-width:100%;
-    max-height:100%;
-    object-fit:contain;
-    
-}
-
-/* TEXT */
-.home-text{
-    max-width:450px;
-}
-
-.home-text h1{
-    font-size:50px;
-    margin-bottom:15px;
-}
-
-.home-text p{
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-/* SKILLS */
-.skills-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-}
-
-.skill{
-    background:#00cec9;
-    color:white;
-    padding:10px 20px;
-    border-radius:20px;
-    font-size:14px;
-}
-
-/* CARDS */
-.card{
-    background:white;
-    padding:20px;
-    margin-bottom:20px;
-    border-radius:8px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.08);
-}
-
-/* CONTACT */
-.contact a{
-    display:block;
-    margin-bottom:10px;
-    color:#0984e3;
-    text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    section{
-        padding:40px 6%;
-    }
-
-    .home-container{
-        flex-direction:column;
-        text-align:center;
-        gap:30px;
-    }
-
-    .home-text h1{
-        font-size:36px;
-    }
-
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#skills">Skills</a>
-    <a href="#internships">Internships</a>
-    <a href="#certificates">Certificates</a>
-    <a href="#contact">Contact</a>
+    <div class="logo">Praveena K</div>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </div>
 </nav>
 
-<section id="home">
-    <div class="home-container">
-        <div class="photo">
+<div class="side-menu" id="sideMenu">
+    <a href="#hero" onclick="toggleMenu()"><i class="fas fa-home"></i> Home</a>
+    <a href="#about" onclick="toggleMenu()"><i class="fas fa-user"></i> About</a>
+    <a href="#skills" onclick="toggleMenu()"><i class="fas fa-lightbulb"></i> Skills</a>
+    <a href="#internship" onclick="toggleMenu()"><i class="fas fa-briefcase"></i> Internship</a>
+    <a href="#education" onclick="toggleMenu()"><i class="fas fa-graduation-cap"></i> Education</a>
+    <a href="#contact" onclick="toggleMenu()"><i class="fas fa-envelope"></i> Contact</a>
+</div>
+
+<section class="hero slide-left" id="hero">
+    <div class="hero-container">
+        <div class="profile">
             <img src="profile.jpg" alt="Praveena K">
         </div>
-        <div class="home-text">
+        <div class="hero-text">
             <h1>Praveena K</h1>
-            <p>B.Tech IT – Third Year</p>
-            <p>Aspiring Web Developer</p>
-            <p>Leadership | Fast Learner</p>
+            <h3><i class="fas fa-code"></i> Full Stack Developer | Problem Solver</h3>
+            <p>Passionate IT student focused on building responsive and user-friendly web applications.</p>
         </div>
     </div>
 </section>
 
-<section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-list">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Java (Basics)</div>
-        <div class="skill">Python (Basics)</div>
+<section class="section" id="about">
+    <h2 class="slide-right"><i class="fas fa-user"></i> About Me</h2>
+    <div class="card slide-up">
+        <p>
+            I am pursuing B.Tech in Information Technology with strong interest in full stack development.
+            I aim to build scalable software solutions.
+        </p>
     </div>
 </section>
 
-<section id="internships">
-    <h2>Internships</h2>
-    <div class="card">
-        <h3>InternPE</h3>
-        <p>13 Oct 2025 – 9 Nov 2025</p>
+<section class="section" id="skills">
+    <h2 class="slide-left"><i class="fas fa-lightbulb"></i> Skills</h2>
+
+    <div class="skills-category slide-up">
+        <h4>Technical Skills</h4>
+        <div class="skills">
+            <span><i class="fab fa-html5"></i> HTML</span>
+            <span><i class="fab fa-css3-alt"></i> CSS</span>
+            <span><i class="fab fa-js"></i> JavaScript</span>
+            <span><i class="fab fa-python"></i> Python</span>
+            <span><i class="fab fa-java"></i> Java</span>
+            <span><i class="fas fa-database"></i> MySQL</span>
+        </div>
     </div>
-    <div class="card">
-        <h3>Astro Web Solution</h3>
-        <p>19 June 2025 – 19 July 2025</p>
+
+    <div class="skills-category slide-up">
+        <h4>Tools</h4>
+        <div class="skills">
+            <span><i class="fas fa-code"></i> VS Code</span>
+            <span><i class="fab fa-github"></i> Git & GitHub</span>
+            <span><i class="fab fa-figma"></i> Figma</span>
+        </div>
+    </div>
+
+    <div class="skills-category slide-up">
+        <h4>Soft Skills</h4>
+        <div class="skills">
+            <span><i class="fas fa-comment"></i> Communication</span>
+            <span><i class="fas fa-users"></i> Teamwork</span>
+            <span><i class="fas fa-lightbulb"></i> Problem Solving</span>
+        </div>
     </div>
 </section>
 
-<section id="certificates">
-    <h2>Certificates & Participation</h2>
-    <div class="card">
-        <p>NPTEL Certified – Python for Data Science</p>
+<section class="section" id="internship">
+    <h2 class="slide-right"><i class="fas fa-briefcase"></i> Internship</h2>
+
+    <div class="card slide-up">
+        <h3><i class="fas fa-building"></i> InternPE</h3>
+        <p>Oct 2025 – Nov 2025</p>
+        <ul>
+            <li>Worked on frontend development tasks</li>
+            <li>Improved UI responsiveness</li>
+        </ul>
     </div>
-    <div class="card">
-        <p>Hackathon – Kamarajar College of Engineering and Technology</p>
-    </div>
-    <div class="card">
-        <p>MSME Hackathon Participant</p>
+
+    <div class="card slide-up">
+        <h3><i class="fas fa-building"></i> Astro Web Solution</h3>
+        <p>June 2025 – July 2025</p>
+        <ul>
+            <li>Developed responsive web pages</li>
+            <li>Assisted in debugging applications</li>
+        </ul>
     </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact</h2>
-    <a href="mailto:kavyapravena1526@gmail.com">kavyapravena1526@gmail.com</a>
-    <a href="https://github.com/praveena-15052005/Praveena.K.git" target="_blank">GitHub Profile</a>
-    <a href="https://www.linkedin.com/in/praveena-k-488b78370" target="_blank">LinkedIn Profile</a>
+<section class="section" id="education">
+    <h2 class="slide-left"><i class="fas fa-graduation-cap"></i> Education</h2>
+    <div class="card slide-up">
+        <p><i class="fas fa-graduation-cap"></i> B.Tech – Information Technology</p>
+        <p><i class="fas fa-university"></i> AAA College of Engineering and Technology</p>
+        <p><i class="fas fa-calendar"></i> 2023 – 2027</p>
+    </div>
 </section>
 
+<section class="section" id="contact">
+    <h2 class="slide-up"><i class="fas fa-envelope"></i> Contact</h2>
+    <div class="card slide-up">
+        <p><i class="fas fa-envelope"></i> kavyapravena1526@gmail.com</p>
+        <p><i class="fab fa-linkedin"></i> linkedin.com</p>
+        <p><i class="fab fa-github"></i> github.com</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
